@@ -5,6 +5,14 @@ def is_anagram(first_word, second_word):
             if char.isalpha():
                 result += char
             return result.lower()
+    def get_char_freq(input_word):
+        frequency = {}
+        for char in input_word:
+            if char in frequency:
+                frequency[char] += 1
+            else:
+                frequency[char] = 1
+            return frequency
         
 
 
