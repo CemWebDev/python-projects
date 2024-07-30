@@ -20,9 +20,7 @@ def guess_the_number():
             if attempts <= 3:
                 print("Amazing!")
             elif attempts > 3:
-                print("Good!")
-            else:
-                print(f"'Congrats!! You have guessed the number {attempts} attempts. Can be better.")
+                print(f"You've guessed in {attempts}")
             break
         
 guess_the_number()
