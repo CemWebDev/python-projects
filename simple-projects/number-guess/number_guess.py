@@ -1,7 +1,6 @@
 import random
 
 
-
 def guess_the_number():
     number = random.randint(1, 100)
     attempts = 0
@@ -21,5 +20,6 @@ def guess_the_number():
             elif attempts > 3:
                 print(f"You've guessed in {attempts}")
             break
-        
+
+
 guess_the_number()
