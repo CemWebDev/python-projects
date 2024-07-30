@@ -15,3 +15,8 @@ def get_user_choice():
 def winner(user_choice, computer_choice):
     if user_choice == computer_choice:
         print("Same item")
+    elif (user_choice == "rock" and computer_choice == "scissors") or (user_choice == "scissors" and computer_choice == "paper") or (user_choice == "paper" and computer_choice == "rock"):
+        print("You win against to computer!")
+    else:
+        print("Computer Wins!")
+        
