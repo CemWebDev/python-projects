@@ -14,4 +14,4 @@ def get_user_choice():
 
 def winner(user_choice, computer_choice):
     if user_choice == computer_choice:
-        print("Same item1")
+        print("Same item")
