@@ -22,9 +22,8 @@ def view_notes(notes_list):
 def delete_notes(notes_list):
     if notes_list:
         try:
-            print("Which one do you want to delete: ")
             view_notes(notes_list)
-            deleting_index = int(input("1, 2 ...")) - 1    
+            deleting_index = int(input("Which note dou you want to delete: ")) - 1    
             if 0 <= deleting_index < len(notes_list):
                 while True:
                     confirm = input("Are you sure you want to delete this note? (yes/no) ").lower()
