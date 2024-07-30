@@ -1,5 +1,6 @@
 user_input = int(input("Please enter an integer: "))
 
+
 def is_prime(number):
     if number <= 1:
         return False
@@ -15,5 +16,3 @@ if is_prime(user_input):
     print(f"'{user_input} is a prime number.")
 else:
     print(f"'{user_input} is not a prime number.")
-
-
