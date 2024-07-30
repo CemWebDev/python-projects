@@ -5,9 +5,11 @@ def remove_non_alpha(word):
             result += char
     return result.lower()
 
+
 def is_palindrome(text):
     cleaned_text = remove_non_alpha(input_word)
     return cleaned_text == cleaned_text[::-1]
+
 
 input_word = input("Please enter a text: ")
 
