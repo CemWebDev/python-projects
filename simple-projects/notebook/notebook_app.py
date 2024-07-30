@@ -23,14 +23,14 @@ def delete_notes(notes_list):
     if notes_list:
         try:
             print("Which one do you want to delete: ")
-            view_notes()
+            view_notes(notes_list)
             deleting_index = int(input("1, 2 ...")) - 1    
             if 0 <= deleting_index < len(notes_list):
                 while True:
                     confirm = input("Are you sure you want to delete this note? (yes/no) ").lower()
                     if confirm != 'no':
                         removed_note = notes_list.pop(deleting_index)
-                        print(f"{removed_note} deleted.")
+                        print(f"'{removed_note}' deleted.")
                         break
                     else: 
                         print("Deletion canceled!")
@@ -50,7 +50,7 @@ def main():
         if user_choice == "1":
             add_notes(notes)
         elif user_choice == "2":
-            print()
+            view_notes(notes)
         elif user_choice == "3":
             delete_notes(notes)
         elif user_choice == "4":
@@ -58,3 +58,6 @@ def main():
             break
         else:
             print("Invalid operation!") 
+
+
+main()
