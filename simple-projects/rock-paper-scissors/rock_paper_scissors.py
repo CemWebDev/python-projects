@@ -23,8 +23,13 @@ def winner(user_choice, computer_choice):
     print(f"Computers choice: {computer_choice}")
         
 def start_game():
-    user_choice = get_user_choice()
-    computer_choice = get_computer_choice()
-    winner(user_choice, computer_choice)
+    while True:
+        user_choice = get_user_choice()
+        computer_choice = get_computer_choice()
+        winner(user_choice, computer_choice)
+        
+        query = input("Do you want to play again? (yes/no): ").lower()
+        if query != "yes":
+            break
     
 start_game()
