@@ -49,3 +49,19 @@ def check_the_guess(guess, arranged_color_code):
             color_counts[guess_color] -= 1
     
     return correct_position, wrong_position
+
+
+def main():
+    print(f"Welcome to our game! You have {attempts} attempt to guess the color code.")
+    color_code = generate_color_code()
+    for attempt in range(1, attempts + 1):
+        guess = guess_color_code()
+        correct_position, wrong_position = check_the_guess(guess, color_code)
+        
+        if correct_position == color_code_length:
+            print(f"You guessed in {attempt} tries!")
+        
+        print(f"Correct positions: {correct_position} || Incorrect positions: {wrong_position}")
+        
+    else:
+        print("Game over!")
