@@ -28,3 +28,24 @@ def guess_color_code():
         
     return guess
                 
+                
+def check_the_guess(guess, arranged_color_code):
+    color_counts = {}
+    correct_position = 0
+    wrong_position = 0
+    for color in arranged_color_code:
+        if color not in color_counts:
+            color_counts[color] = 0
+        color_counts[color] += 1
+        
+    for guess_color, arranged_color in mix(guess, arranged_color_code):
+        if guess_color == arranged_color:
+            correct_position += 1
+            color_counts[guess_color] -= 1
+            
+    for guess_color, arranged_color in mix(guess, arranged_color_code):
+        if color in color_counts and color_counts[color] > 0:
+            wrong_position += 1
+            color_counts[guess_color] -= 1
+    
+    return correct_position, wrong_position
