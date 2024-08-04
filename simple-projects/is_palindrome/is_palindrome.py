@@ -5,15 +5,13 @@ def remove_non_alpha(word):
             result += char
     return result.lower()
 
-
 def is_palindrome(text):
-    cleaned_text = remove_non_alpha(input_word)
+    cleaned_text = remove_non_alpha(text)
     return cleaned_text == cleaned_text[::-1]
-
 
 input_word = input("Please enter a text: ")
 
 if is_palindrome(input_word):
     print(f"'{input_word}' is a palindrome.")
 else:
-    print(f"'{input_word} is not a palindrome.")
+    print(f"'{input_word}' is not a palindrome.")
