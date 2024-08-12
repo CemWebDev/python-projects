@@ -2,7 +2,7 @@ import numpy as np
 
 
 def get_square_matrix():
-    rows = int(input('Enter the number of rows'))
+    rows = int(input('Enter the number of rows: '))
     cols = rows
     
     matrix = []
@@ -13,3 +13,4 @@ def get_square_matrix():
         matrix.append(row)
         
     return np.array(matrix)
+
