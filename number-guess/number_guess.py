@@ -9,7 +9,7 @@ def guess_the_number():
             guess_number = int(input("Guess the number: "))
             attempts += 1
         except ValueError:
-            print("Only  integer values!")
+            print("Only integer values!")
         if guess_number < number:
             print("Too low!")
         elif guess_number > number:
