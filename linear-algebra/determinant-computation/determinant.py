@@ -16,3 +16,5 @@ def get_matrix():
         matrix.append(row)
         
     return np.array(matrix)
+
+matrix = get_matrix()
