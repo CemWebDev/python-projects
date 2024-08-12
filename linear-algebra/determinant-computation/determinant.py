@@ -2,11 +2,8 @@ import numpy as np
 
 def get_matrix():
     rows = int(input('Enter the number of rows: '))
-    cols = int(input('Enter the number of columns: '))
-    
-    if rows != cols:
-        raise ValueError('Determinant can only be calculated for square matrices!')
-    
+    cols = rows
+        
     print(f'Enter the elements of the matrix {rows}x{cols}')
     matrix = []
     for i in range(rows):
