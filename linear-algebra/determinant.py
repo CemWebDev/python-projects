@@ -1,7 +1,7 @@
 import numpy as np
-from matrix_utils import get_square_matrix
+from matrix_utils import determine_matrix
 
-matrix = get_square_matrix()
+matrix = determine_matrix(square_matrix=True)
 
 try:
     determinant = np.linalg.det(matrix)
