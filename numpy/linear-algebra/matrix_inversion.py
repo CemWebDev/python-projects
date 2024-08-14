@@ -1,5 +1,5 @@
 import numpy as np
-from matrix_utils import determine_matrix
+from matrix_utils import determine_matrix as matrix
 
 
 def compute_inverse(matrix):
@@ -9,7 +9,7 @@ def compute_inverse(matrix):
     except np.linalg.LinAlgError:
         raise ValueError('The matrix is not invertible because its determinant is zero.')
 
-matrix = determine_matrix(square_matrix=True)
+matrix = matrix(square_matrix=True)
 
 try:
     inverse_matrix = compute_inverse(matrix)
