@@ -13,3 +13,10 @@ def word_counter(text):
             word_count[word] = 1
             
     return word_count
+
+text_input = input("Please enter a text: ")
+
+cleaned_text = word_counter(text_input)
+
+for word, count in cleaned_text.items():
+    print(f"'{word}': {count} times")
