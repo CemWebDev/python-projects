@@ -17,6 +17,9 @@ def guess_the_number():
         
         try:
             guess_number = int(input(f"Attempt {attempts + 1}/{max_attempts} - Guess the number: "))
+            if guess_number < 1 or guess_number > 100:
+                print("Invalid input! Please enter a number between 1 and 100.")
+                continue 
             attempts += 1
         except ValueError:
             print("Only integer values are allowed! Please try again.")
